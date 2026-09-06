@@ -1,0 +1,22 @@
+{
+  "name": "weather-forecast-ai",
+  "version": "1.0.0",
+  "description": "Weather forecast application using OpenAI function calling",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "cli": "node src/cli.js"
+  },
+  "keywords": ["weather", "openai", "forecast", "api"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "openai": "^4.52.0",
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
+  }
+}

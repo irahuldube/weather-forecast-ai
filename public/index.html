@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Forecast AI</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="header-content">
+          <h1>🌤️ Weather Forecast AI</h1>
+          <p>Ask me about the weather in any city</p>
+        </div>
+      </header>
+
+      <main class="main-content">
+        <!-- Chat Messages Container -->
+        <div class="chat-container">
+          <div class="messages" id="messagesContainer">
+            <div class="message bot-message">
+              <div class="message-content">
+                <p>👋 Hi! I'm your weather assistant. Ask me about the weather in any city!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="input-area">
+          <form id="weatherForm" class="weather-form">
+            <div class="input-wrapper">
+              <input
+                type="text"
+                id="weatherInput"
+                class="weather-input"
+                placeholder="Ask about weather (e.g., 'What's the weather in London?')"
+                autocomplete="off"
+              />
+              <button type="submit" class="submit-btn" id="submitBtn">
+                <span>Send</span>
+                <span class="loading" style="display: none;">⏳</span>
+              </button>
+            </div>
+          </form>
+          <div class="suggestions">
+            <p>Try asking:</p>
+            <div class="suggestion-buttons">
+              <button class="suggestion-btn" onclick="sendSuggestion('What\\'s the weather in London?')">
+                London
+              </button>
+              <button class="suggestion-btn" onclick="sendSuggestion('How cold is it in Tokyo?')">
+                Tokyo
+              </button>
+              <button class="suggestion-btn" onclick="sendSuggestion('Tell me about the weather in New York')">
+                New York
+              </button>
+              <button class="suggestion-btn" onclick="sendSuggestion('Is it sunny in Paris?')">
+                Paris
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <p>Powered by OpenAI & OpenWeather API</p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
